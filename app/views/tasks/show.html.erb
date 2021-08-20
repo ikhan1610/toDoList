@@ -1,5 +1,6 @@
-<p id="notice"><%= notice %></p>
-
+<!--<p id="notice"><%= notice %></p>-->
+<br/>
+<br/>
 <p>
   <strong>Description:</strong>
   <%= @task.description %>
@@ -15,5 +16,8 @@
   <%= @task.estimated_time_to_finish %>
 </p>
 
-<%= link_to 'Edit', edit_task_path(@task) %> |
-<%= link_to 'Back', tasks_path %>
+<%= link_to 'Edit', edit_task_path(@task), class:"btn btn-secondary" %>
+<%= link_to 'Delete', @task, method: :delete, 
+                                        data: { confirm: 'Are you sure?' },
+                                        class:"btn btn-danger" %>
+<%= link_to 'Back', tasks_path, class:"btn btn-dark" %>

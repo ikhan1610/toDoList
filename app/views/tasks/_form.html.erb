@@ -11,22 +11,22 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description %>
+  <div class="field mb-3">
+    <% form.label :description %>
+    <%= form.text_field :description, placeholder:"Task Name" %>
   </div>
 
-  <div class="field">
-    <%= form.label :status %>
-    <%= form.text_field :status %>
+  <div class="field mb-3">
+    <% form.label :status %>
+    <%= form.text_field :status, placeholder:"Status" %>
   </div>
 
-  <div class="field">
-    <%= form.label :estimated_time_to_finish %>
-    <%= form.text_field :estimated_time_to_finish %>
+  <div class="field mb-3">
+    <% form.label :estimated_time_to_finish %>
+    <%= form.text_field :estimated_time_to_finish, placeholder:"Finish By" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class:"btn btn-secondary" %>
   </div>
 <% end %>
