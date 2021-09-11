@@ -8,25 +8,33 @@
       <th>Description</th>
       <th>Status</th>
       <th>Estimated time to finish</th>
+      <th>User ID</th>
+      <th></th>
+      <th></th>
+      <th></th>
   </thead>
 
   <tbody>
     <% @tasks.each do |task| %>
-      <tr>
-        <td><%= link_to task.description, task,
-                                          class:"text-decoration-none
-                                                text-reset" %></td>
-        <!--<td><%= task.description %></td>-->
-        <td><%= task.status %></td>
-        <td><%= task.estimated_time_to_finish %></td>
-        <!--<td><%= link_to 'Show', task %></td>-->
-        <!--<td><%= link_to 'Edit', edit_task_path(task) %></td>-->
-        <!--<td><%= link_to 'Delete', task, method: :delete, 
-                                        data: { confirm: 'Are you sure?' },
-                                        class:"btn btn-outline-danger" %>-->
-            
-        </td>
-      </tr>
+        <tr>
+          <td><%= link_to task.description, task,
+                                            class:"text-decoration-none
+                                                  text-reset" %></td>
+          <!--<td><%= task.description %></td>-->
+          <td><%= task.status %></td>
+          <td><%= task.estimated_time_to_finish %></td>
+          <td><%= task.user_id%></td>
+          <td><%= link_to 'Show', task %></td>
+          <td><%= link_to 'Edit', edit_task_path(task) %></td>
+          <td><%= link_to 'Delete', task, method: :delete, 
+                                            data: { confirm: 'Are you sure?' },
+                                            class:"btn btn-outline-danger" %>
+         
+              
+          </td>
+          
+        </tr>
+        
     <% end %>
   </tbody>
 </table>

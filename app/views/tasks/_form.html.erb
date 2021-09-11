@@ -26,6 +26,15 @@
     <%= form.text_field :estimated_time_to_finish, placeholder:"Finish By" %>
   </div>
 
+   <div class="field mb-3">
+    <% form.label :user_id %>
+    <%= form.number_field :user_id, id: :task_user_id, 
+                                    value:current_user.id,
+                                    type: :hidden %>
+
+  </div>
+  
+
   <div class="actions">
     <%= form.submit class:"btn btn-secondary" %>
   </div>
